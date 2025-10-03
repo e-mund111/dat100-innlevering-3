@@ -32,11 +32,16 @@ public class DayMain {
         System.out.println("Test for c)");
         System.out.println("Total kWh: " + DailyPower.computePowerUsage(powerusage_day));
 
+        // test for 1d)
         System.out.println();
         System.out.println("Test for d)");
         System.out.printf("Total pris for dagen: " + "%.2f NOK", DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
 
-
+        /* test for 1e)
+        System.out.println();
+        System.out.println("Test for e)");
+        System.out.printf("Strømstøtte motatt: " + "%.2f", DailyPower.getSupport);
+        */
         /*
         TODO
 

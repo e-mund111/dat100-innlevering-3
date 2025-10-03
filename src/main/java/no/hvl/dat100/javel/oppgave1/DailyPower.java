@@ -47,7 +47,7 @@ public class DailyPower {
         double support = 0;
 
         if (price > THRESHOLD) {
-            support += (price - THRESHOLD) * PERCENTAGE;
+            support += ((price - THRESHOLD) * PERCENTAGE) * usage;
         }
         return support;
     }
@@ -74,13 +74,16 @@ public class DailyPower {
         return price;
     }
 
-    // g) compute peak usage during a single day
+    // h) compute peak usage during a single day
     public static double findPeakUsage(double[] usage) {
 
         double temp_max = 0;
 
-        // TODO
-
+        for (int i = 0; i < usage.length; i++) {
+            if (temp_max < usage[i]) {
+                temp_max = usage[i];
+            }
+        }
         return temp_max;
     }
 
