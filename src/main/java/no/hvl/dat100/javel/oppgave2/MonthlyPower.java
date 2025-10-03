@@ -14,8 +14,12 @@ public class MonthlyPower {
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
 
-        // TODO
-
+        for(int i = 0; i < prices.length; i++) {
+            for(int j = 0; j < prices[i].length; i++) {
+                System.out.printf("Day " + i+1 + "%.2f NOK", prices[i][j]);
+                System.out.println();
+            }
+        }
     }
 
     // c) compute total power usage for a month
@@ -34,8 +38,14 @@ public class MonthlyPower {
         boolean exceeded = false;
         double usage = 0;
 
-        // TODO
-
+        for(int i = 0; i < powerusage.length; i++) {
+            for(int j = 0; j < powerusage[i].length; i++) {
+                usage += powerusage[i][j];
+            }
+        }
+        if (usage > threshold) {
+            exceeded = true;
+        }
         return exceeded;
     }
 
@@ -63,9 +73,13 @@ public class MonthlyPower {
     public static double computeNorgesPrice(double[][] usage) {
 
         double price = 0;
+        double norgespris = 0.5;
 
-        // TODO
-
+        for (double[] forbrukDag : usage) {
+            for (double forbrukTime : forbrukDag) {
+                price += (forbrukTime * norgespris);
+            }
+        }
         return price;
     }
 }
