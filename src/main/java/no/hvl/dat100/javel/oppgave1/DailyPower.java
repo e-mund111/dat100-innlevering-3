@@ -57,7 +57,10 @@ public class DailyPower {
 
         double support = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++) {
+
+            support += ((prices[i] - THRESHOLD) * PERCENTAGE) * usage[i];
+        }
 
         return support;
     }
@@ -69,7 +72,10 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++) {
+
+            price += NORGESPRIS_KWH * usage[i];
+        }
 
         return price;
     }
@@ -87,12 +93,17 @@ public class DailyPower {
         return temp_max;
     }
 
+    // i)
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++) {
 
+            average += usage[i];
+
+        }
+        average /= 24;
         return average;
     }
 }
