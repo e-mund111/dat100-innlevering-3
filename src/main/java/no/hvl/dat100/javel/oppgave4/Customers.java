@@ -16,10 +16,13 @@ public class Customers {
     // b) count number of non-null references
     public int countNonNull() {
 
-
         int count = 0;
 
-        // TODO
+        for (int i = 0; i < customers.length; i++) {
+            if ( customers[i] != null) {
+                count++;
+            }
+        }
 
         return count;
     }
@@ -30,7 +33,12 @@ public class Customers {
         boolean funnet = false;
         Customer c = null;
 
-        // TODO
+        for (int i = 0; i < customers.length; i++) {
+            if (customer_id == Customer.getCustomer_id(customers[i])) {
+                funnet = true;
+                c = customers[i];
+            }
+        }
 
         return c;
     }
