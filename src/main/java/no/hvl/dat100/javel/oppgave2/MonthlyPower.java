@@ -7,10 +7,10 @@ public class MonthlyPower {
     // a) print power usage for a month
     public static void print_PowerUsage(double[][] usage) {
 
-        for(int i = 0; i < usage.length; i++) {
+        for (int i = 0; i < usage.length; i++) {
 
-            for(int j = 0; j < usage[i].length; j++) {
-                System.out.printf("Dag " + i+1 + "%.2f kWh", usage[i][j]);
+            for (int j = 0; j < usage[i].length; j++) {
+                System.out.printf("Dag:%d time:%d %.2f kWh",(i+1),(j+1), usage[i][j]);
                 System.out.println();
             }
         }
@@ -20,9 +20,9 @@ public class MonthlyPower {
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
 
-        for(int i = 0; i < prices.length; i++) {
-            for(int j = 0; j < prices[i].length; i++) {
-                System.out.printf("Day " + i+1 + "%.2f NOK", prices[i][j]);
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = 0; j < prices[i].length; j++) {
+                System.out.printf("Dag:%d time:%d %.2f NOK",(i+1),(j+1), prices[i][j]);
                 System.out.println();
             }
         }
@@ -48,8 +48,8 @@ public class MonthlyPower {
         boolean exceeded = false;
         double usage = 0;
 
-        for(int i = 0; i < powerusage.length; i++) {
-            for(int j = 0; j < powerusage[i].length; i++) {
+        for (int i = 0; i < powerusage.length; i++) {
+            for (int j = 0; j < powerusage[i].length; j++) {
                 usage += powerusage[i][j];
             }
         }
@@ -88,8 +88,6 @@ public class MonthlyPower {
                 }
             }
         }
-
-
         return support;
     }
 
@@ -99,16 +97,12 @@ public class MonthlyPower {
         double price = 0;
         double norgespris = 0.5;
 
-<<<<<<< Updated upstream
         for (double[] forbrukDag : usage) {
             for (double forbrukTime : forbrukDag) {
                 price += (forbrukTime * norgespris);
             }
         }
-=======
-
-
->>>>>>> Stashed changes
         return price;
+
     }
 }

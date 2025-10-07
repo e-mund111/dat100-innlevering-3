@@ -36,16 +36,36 @@ public class DayMain {
         System.out.println();
         System.out.println("Test for d)");
         System.out.printf("Total pris for dagen: " + "%.2f NOK", DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
+        System.out.println();
 
         // test for 1e)
         System.out.println();
         System.out.println("Test for e)");
-        System.out.printf("Strømstøtte motatt denne timen: " + "%.2f", DailyPower.getSupport(5000, 50));
+        System.out.printf("Strømstøtte motatt denne timen: " + "%.2f NOK", DailyPower.getSupport(5000, 50));
+        System.out.println();
 
         // test for 1f)
         System.out.println();
         System.out.println("Test for f)");
-        System.out.printf("Strømstøtte motatt denne dagen: " + DailyPower.computePowerSupport(powerusage_day, powerprices_day));
+        System.out.printf("Strømstøtte motatt denne dagen: " + "%.2f", DailyPower.computePowerSupport(powerusage_day, powerprices_day));
+        System.out.println();
+
+        // test for 1g)
+        System.out.println();
+        System.out.println("Test for g)");
+        System.out.printf("Strømpris denne dagen: " + "%.2f NOK", DailyPower.computeNorgesPrice(powerusage_day));
+        System.out.println();
+
+        // test for 1h)
+        System.out.println();
+        System.out.println("Test for h)");
+        System.out.println("Største strømforbruk på time: " + DailyPower.findPeakUsage(powerusage_day));
+
+        // test for 1i)
+        System.out.println();
+        System.out.println("Test for i)");
+        System.out.printf("Gjennomsnitt strømforbruk per time idag: " + "%.2f", DailyPower.findAvgPower(powerusage_day));
+
 
         /*
         TODO
