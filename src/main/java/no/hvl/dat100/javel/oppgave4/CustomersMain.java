@@ -12,6 +12,13 @@ public class CustomersMain {
         System.out.println("==============");
         System.out.println();
 
+        // test av 4a)
+        new Customers(5);
+
+        // test av 4b)
+
+
+
         /*
         TODO
 

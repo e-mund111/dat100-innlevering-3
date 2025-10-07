@@ -19,7 +19,7 @@ public class Customers {
         int count = 0;
 
         for (int i = 0; i < customers.length; i++) {
-            if ( customers[i] != null) {
+            if ( customers[i] != null ) {
                 count++;
             }
         }
