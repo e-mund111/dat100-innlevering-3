@@ -75,9 +75,12 @@ public class Customers {
     public Customer[] getCustomers() {
 
         Customer[] customers = null;
+        customers = new Customer[countNonNull()];
 
         for (int i = 0; i < customers.length; i++) {
-            
+            if (customers[i] != null) {
+                customers[i] = this.customers[i];
+            }
         }
 
         return customers;

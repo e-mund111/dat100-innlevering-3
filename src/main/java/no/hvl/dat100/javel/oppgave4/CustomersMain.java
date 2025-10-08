@@ -12,13 +12,22 @@ public class CustomersMain {
         System.out.println("==============");
         System.out.println();
 
-        // test av 4a)
-        new Customers(5);
+        Customers customers = new Customers(5);
+         // test av 4a)
 
+        System.out.println("Test for 4a)");
+        System.out.println("Lengde: ");
+        System.out.println();
         // test av 4b)
 
+        System.out.println("Test av 4b)");
+        System.out.println(customers.countNonNull());
+        System.out.println();
 
-
+        //test av 4c
+        Customer c2 = new Customer("Per Perry","pp@gmail.com"
+                ,2,PowerAgreementType.NORGESPRICE);
+        System.out.println();
         /*
         TODO
 
