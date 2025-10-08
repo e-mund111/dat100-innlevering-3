@@ -4,7 +4,7 @@ import no.hvl.dat100.javel.oppgave3.Customer;
 
 public class Customers {
 
-    private Customer[] customers;
+    public Customer[] customers;
 
     // a) Complete constructor
     public Customers(int size) {
@@ -34,7 +34,7 @@ public class Customers {
         Customer c = null;
 
         for (int i = 0; i < customers.length; i++) {
-            if (customer_id == customers[i].getCustomer_id()) {
+            if (customers[i] != null && customer_id == customers[i].getCustomer_id()) {
                 funnet = true;
                 c = customers[i];
             }
@@ -45,15 +45,13 @@ public class Customers {
     // d) add a customer to the reference table
     public boolean addCustomer(Customer c) {
 
-        boolean inserted = false;
-
         for (int i = 0; i < customers.length; i++) {
             if (customers[i] == null) {
                 customers[i] = c;
-                inserted = true;
+                return true;
             }
         }
-        return inserted;
+        return false;
     }
 
     // e) remove customer with given id from reference table
