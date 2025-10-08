@@ -34,12 +34,11 @@ public class Customers {
         Customer c = null;
 
         for (int i = 0; i < customers.length; i++) {
-            if (customer_id == Customer.getCustomer_id(customers[i])) {
+            if (customer_id == customers[i].getCustomer_id()) {
                 funnet = true;
                 c = customers[i];
             }
         }
-
         return c;
     }
 
@@ -48,8 +47,12 @@ public class Customers {
 
         boolean inserted = false;
 
-        // TODO
-
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] == null) {
+                customers[i] = c;
+                inserted = true;
+            }
+        }
         return inserted;
     }
 
@@ -59,8 +62,12 @@ public class Customers {
         boolean deleted = false;
         Customer c = null;
 
-        // TODO
-
+        for (int i = 0; i < customers.length; i++) {
+            if (customer_id == customers[i].getCustomer_id()) {
+                customers[i] = null;
+                deleted = true;
+            }
+        }
         return c;
     }
 
@@ -69,7 +76,9 @@ public class Customers {
 
         Customer[] customers = null;
 
-        // TODO
+        for (int i = 0; i < customers.length; i++) {
+            
+        }
 
         return customers;
     }
