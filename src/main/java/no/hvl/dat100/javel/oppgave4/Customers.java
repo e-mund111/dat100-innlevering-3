@@ -75,9 +75,11 @@ public class Customers {
         Customer[] customers = null;
         customers = new Customer[countNonNull()];
 
+        int j = 0;
         for (int i = 0; i < customers.length; i++) {
-            if (customers[i] != null) {
-                customers[i] = this.customers[i];
+            if (this.customers != null) {
+                customers[i] = this.customers[j];
+                j++;
             }
         }
 
